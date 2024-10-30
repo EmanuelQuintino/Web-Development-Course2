@@ -72,3 +72,50 @@ function wordCount(text) {
 const text = "Emanuel Quintino";
 
 console.log(wordCount(text));
+
+const tvPrograms = ["Domingo Legal", "Fantástico", "Domingão com Hulk"];
+
+// LIFO
+// tvPrograms.pop();
+// tvPrograms.pop();
+tvPrograms.push("Bom dia e Cia");
+tvPrograms.push("TV Globinho");
+tvPrograms.pop();
+
+// FIFO
+tvPrograms.unshift("TV Cruj");
+tvPrograms.unshift("Castelo Ratimbum");
+// tvPrograms.shift()
+
+tvPrograms.splice(3, 2);
+tvPrograms.splice(1, 4, "aaaa");
+
+console.log(tvPrograms);
+
+// Date
+
+const dateNow = new Date();
+console.log(dateNow);
+console.log(dateNow.toLocaleString("pt-BR"));
+console.log(dateNow.toLocaleDateString("pt-BR"));
+console.log(dateNow.toLocaleTimeString("pt-BR"));
+
+console.log(
+  dateNow.toLocaleString("pt-BR", {
+    weekday: "long",
+    day: "numeric",
+    month: "numeric",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  })
+);
+
+const birthday = new Date("1992-12-25 00:00:00");
+
+console.log(birthday);
+console.log((dateNow - birthday) / 1000 / 60 / 60 / 24 / 365.25);
+
+console.log(dateNow.getFullYear());
+console.log(birthday.getFullYear());
+console.log(dateNow.getFullYear() - birthday.getFullYear());
