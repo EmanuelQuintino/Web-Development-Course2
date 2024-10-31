@@ -119,3 +119,23 @@ console.log((dateNow - birthday) / 1000 / 60 / 60 / 24 / 365.25);
 console.log(dateNow.getFullYear());
 console.log(birthday.getFullYear());
 console.log(dateNow.getFullYear() - birthday.getFullYear());
+
+// ⚠️ Desafio: Crie uma função para verificar palíndromos e retorne TRUE ou FALSE. A lógica deve receber string com palavra ou texto
+
+function isPalindrome(text) {
+  const original = text.replaceAll(" ", "").toLocaleLowerCase();
+
+  const reverse = original.split("").reverse().join("");
+
+  return original == reverse;
+}
+
+console.log(isPalindrome("A torre da derrota"));
+
+// ⚠️ Desafio: Crie uma lógica que verifique quantos dias faltam para o ano novo (01/01/2025)
+
+const newYear = new Date("2025-01-01 00:00:00");
+const today = new Date();
+const daysToNewYear = newYear - today;
+
+console.log(Math.floor(daysToNewYear / 1000 / 60 / 60 / 24));
