@@ -139,3 +139,13 @@ const today = new Date();
 const daysToNewYear = newYear - today;
 
 console.log(Math.floor(daysToNewYear / 1000 / 60 / 60 / 24));
+
+const numbers = [0, 1];
+const amount = 10;
+
+for (let i = 2; i < amount; i++) {
+  const result = numbers[i -2] + numbers[i -1]
+  numbers.push(result);
+}
+
+console.log(numbers);
