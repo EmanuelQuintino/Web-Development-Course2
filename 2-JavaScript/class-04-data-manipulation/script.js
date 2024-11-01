@@ -144,8 +144,18 @@ const numbers = [0, 1];
 const amount = 10;
 
 for (let i = 2; i < amount; i++) {
-  const result = numbers[i -2] + numbers[i -1]
+  const result = numbers[i - 2] + numbers[i - 1];
   numbers.push(result);
 }
 
 console.log(numbers);
+
+console.log(dateNow.toLocaleDateString());
+console.log(new Date("2024-07-09").toLocaleTimeString());
+console.log(
+  new Date("2024-09-07").toLocaleString("en-us", {
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+  })
+);
