@@ -35,3 +35,22 @@ for (let i = 0; i < students.length; i++) {
 }
 
 console.log("End!");
+
+// ⚠️ Desafio: Crie um algoritmo que sortei os números da Mega-Sena
+// São 6 números aleatórios não duplicados de 1 a 60
+// Coloque em ordem crescente, com 0 a esquerda e separe com "-"
+
+const numbers = [];
+
+while (numbers.length < 6) {
+  const draw = Math.ceil(Math.random() * 60);
+  const numberFormatted = String(draw).padStart(2, 0);
+
+  if (numbers.includes(numberFormatted)) {
+    continue;
+  } else {
+    numbers.push(numberFormatted);
+  }
+}
+
+console.log(numbers.sort((a, b) => a - b).join("-"));
