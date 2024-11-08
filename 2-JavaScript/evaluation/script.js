@@ -8,10 +8,11 @@
 const string = "Emanuel";
 let number = 1;
 let boolean = true;
+
 let addFunction = () => 1 + 1;
 
-function addNumbers() {
-  return 1 + 1;
+function addNumbers(num) {
+  return num + 1;
 }
 
 let array = [1, "A", [1, 2, 3]];
@@ -38,15 +39,35 @@ console.log(Math.sqrt(144));
 
 // Crie e execute uma função de nome "concat" que retorne "JavaScript" concatenado com um valor passado como argumento e imprima seu retorno
 
-return "JavaScript" + arg;
+function concat(text) {
+  return "Javascript" + text;
+}
+
+console.log(concat("JS"));
+
+// return "JavaScript" + arg;
 
 // Questão 4 (Data Manipulation):
 
-// Usando os métodos FIFO e LIFO, crie um array com 3 valos e posteriormente insira mais um valor no final e substitua o do início por outro
+// Usando os métodos FIFO e LIFO, crie um array com 3 valores e posteriormente insira mais um valor no final e substitua o do início por outro
+
+const series = ["Game of Thrones", "Rick and Morty", "Os Simpsons"];
+series.push("The Walking Dead");
+
+series.shift();
+series.unshift("La casa de papel");
+
+series.splice(0, 1, "Family Guy");
+
+console.log(series);
 
 // Questão 5 (for):
 
 // Liste todos os valores do array criado na questão anterior ultilizando o for
+
+for (let i = 0; i < series.length; i++) {
+  console.log(series[i]);
+}
 
 // Questão 6 (while):
 
