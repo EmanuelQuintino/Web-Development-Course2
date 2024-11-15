@@ -63,9 +63,16 @@ const downButton = document.querySelector(".down");
 const displayValue = document.querySelector(".display");
 
 const airButton = new Control(17, "Cinza");
+
 powerButton.addEventListener("click", () => {
   airButton.power();
   displayValue.innerHTML = airButton.isOn ? `${airButton.temp}°c` : "";
+
+  if (airButton.isOn) {
+    displayValue.style.boxShadow = "inset 0 0 16px 1px #91afe1";
+  } else {
+    displayValue.style.boxShadow = "none";
+  }
 });
 
 upButton.addEventListener("click", () => {
