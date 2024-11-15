@@ -1,6 +1,8 @@
 const box = document.querySelector(".box");
 const title = document.querySelector("h1");
-console.log(box);
+// console.log(box);
+console.log(title);
+title.innerHTML = "Outra coisa";
 console.log(title.innerHTML);
 
 box.innerHTML = "Text";
@@ -38,4 +40,11 @@ function basic() {
 
 title.addEventListener("click", () => {
   console.log("Title");
+});
+
+const myInput = document.querySelector("input");
+console.log(myInput);
+
+myInput.addEventListener("keyup", () => {
+  console.log(myInput.value);
 });
