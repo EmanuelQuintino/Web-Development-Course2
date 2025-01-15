@@ -1,8 +1,9 @@
 import { useContext } from "react";
-import { ValueContext } from "../contexts/valueContext";
+import { ValueContext } from "../contexts/a";
+
 
 export function CountCard() {
-  const value = useContext(ValueContext);
+  const { value } = useContext(ValueContext);
 
   return (
     <>
