@@ -7,6 +7,7 @@ export const appTheme = {
     gray2: "#777",
     gray3: "#aaa",
     gray4: "#ddd",
-    gray5: "#fff",
+    gray5: "#eee",
+    gray6: "#fff",
   },
 };

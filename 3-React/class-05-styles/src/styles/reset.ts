@@ -13,5 +13,7 @@ export const Reset = createGlobalStyle`
 
   body {
     font-size: 1.6rem;
+    background: ${({ theme }) => theme.colors.gray0};
+    color: ${({ theme }) => theme.colors.gray5};
   }
 `;
