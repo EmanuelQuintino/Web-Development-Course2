@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { CardManga } from "./components/CardManga";
-import { Container } from "./style";
+import { Container } from "./styleaa";
 
 export function App() {
   const [mangas, setMangas] = useState([
