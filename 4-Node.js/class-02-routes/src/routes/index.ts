@@ -27,7 +27,7 @@ router.get("/user/:id", (req, res) => {
   res.json(users[Number(id) - 1] || {});
 });
 
-// query params
+// query params (?)
 router.get("/user", (req, res) => {
   const { id, name, value } = req.query;
   res.json({ id, name, value });
