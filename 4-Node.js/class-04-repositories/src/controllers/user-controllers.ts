@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from "express";
 import { AppError } from "../errors/app-error";
 import { z } from "zod";
 import { sqliteConnection } from "../databases";
+import { randomUUID } from "node:crypto";
 
 // zod
 const UserSchema = z.object({
@@ -16,7 +17,7 @@ export const userControllers = {
       const { name, email, password } = UserSchema.parse(req.body);
 
       const user = {
-        id: "2",
+        id: randomUUID(),
         name,
         email,
         password,
